@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Calculator</title>
+	<style>
+	body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+	background-color: #4CAF50;
+  }
+  h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+    color: #4CAF50;
+    font-style: italic;
+    font-size: large;
+  }
+  
+  form {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 500px;
+    margin: auto;
+	background-color: aliceblue;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+  }
+  
+  input[type="number"], input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+  button{
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+
+
+	</style>
+    
+  </head>
+  <body>
+	<h2>JIINUE YOUTH SACCO</h2>
+    <h1>Loan Calculator</h1>
+
+	
+    <form>
+		<label for="loantype">Loan type:</label>
+	<select id="loantype" name="loantype">
+		<option value="emergency">Emergency</option>
+		<option value="normal"selected>Instant</option>
+		<option value="development">Development</option>
+	</select><br><br>
+      <label for="loan-amount">Loan Amount:</label>
+      <input type="number" id="loan-amount" required><br><br>
+      <label for="interest-rate">Interest Rate:</label>
+      <input type="hidden" id="interest-rate" step="0.01" disabled required><br><br>
+      <input type="number" id="interest-rate" step="0.01" disabled required><br><br>
+      <label for="loan-term">Loan Term (in years):</label>
+      <input type="number" id="loan-term" required><br><br>
+      <button type="button" onclick="calculate()">Calculate</button><br><br>
+      <label for="monthly-payment">Monthly Payment:</label>
+      <input type="text" id="monthly-payment" disabled><br><br>
+      <label for="total-interest">Total Interest:</label>
+      <input type="text" id="total-interest" disabled><br><br>
+      <label for="total-amount">Total Amount:</label>
+      <input type="text" id="total-amount" disabled><br><br>
+      <a href="loanapplication form.html">Apply Now</a>
+    </form>
+	
+
+    <script>
+		function calculate() {
+  const loanAmount = parseFloat(document.getElementById("loan-amount").value);
+  const interestRate = parseFloat(document.getElementById("interest-rate").value);
+  const loanTerm = parseFloat(document.getElementById("loan-term").value);
+  
+  const monthlyInterestRate = interestRate / 1200;
+  const monthlyPayment = loanAmount * monthlyInterestRate / (1 - (Math.pow(1/(1 + monthlyInterestRate), loanTerm * 12)));
+  const totalInterest = monthlyPayment * loanTerm * 12 - loanAmount;
+  const totalAmount = monthlyPayment * loanTerm * 12;
+  
+  document.getElementById("monthly-payment").value = monthlyPayment.toFixed(2);
+  document.getElementById("total-interest").value = totalInterest.toFixed(2);
+  document.getElementById("total-amount").value = totalAmount.toFixed(2);
+}
+	</script>
+	
+
+  </body>
+</html>
+
+
+

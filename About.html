@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chartset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+ <div class="navbar">
+    <div class="logo">
+        <img src="logo.png"  length="120px" width="155px">
+    </div>
+ <nav>
+    <ul id="MenuItems">
+        <li><a href="">Home</a></li>
+        <li><a href="">Leadership</a></li>
+        <li><a href="">Our History</a></li>
+        <li><a href="">Investments</a></li>
+        <li><a href="">Sustainability</a></li>
+      </ul>
+</nav>
+<img src="email.png" width="30px" height="30px">
+<img src="menu bar.png" class="menu-icon" onclick="menutoggle()">
+</div> 
+</div>
+<!--About page-->
+<div class="image">
+    <img src="Cute.jpg">
+    <h3 class="first-text">Welcome to Jiinue</h3>
+    <h3 class="second-text">Next Generation Online Banking!</h3>
+    <p>Jiinue Youth Sacco is a sacco founded in Mathari Sub-county for the youths between 
+        18-35 years old. The youths are able to 
+        join the sacco by paying a non-refundable registration fee of 
+        1000 shillings and a minimum of 500 shillings savings a month.
+         After six months they are able to borrow a loan of different
+         types that is emergency, short, normal or development loan. 
+        The loans are of different interest rates per month. 
+        The loans also have different repayment periods. 
+        Loans kept in the bank as fixed deposit acquire 
+        an interest rate of 0.6% per month. To borrow a loan,
+         the member must have three guarantors.</p>
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+            <div class="app-logo">
+                <img src="store.jpg">
+            </div>
+        </div>
+            <div class="footer-col-2">
+                <img src="logo.png">
+                <p>Our purpose its to offer a place where youths can save,borrow loans and be empowered in their investments</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2023 - JIINUE YOUTH SACCO</p>
+    </div>
+</div>
+<!--js for toggle menu-->
+<script>
+    var MenuItems = document.getElementById("MenuItems")
+     MenuItems.style.maxHeight = "0px";
+
+     function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+        else
+            {
+                MenuItems.style.maxHeight = "0px";
+ 
+            }
+
+     }
+</script>
+
+
+</body>
+</html>

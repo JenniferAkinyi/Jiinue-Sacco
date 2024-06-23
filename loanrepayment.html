@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loan Payment with M-Pesa</title>
+	<style>
+        h1{
+            font-size: 170%;
+            text-align: center;
+        }
+        .container {
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+    </style>
+</head>
+<body>
+    <h1>JIINUE YOUTH SACCO</h1>
+	<div class="container">
+		<h2>Loan Payment </h2>
+		<form action="process-payment.php" method="post">
+			<label for="loan-account">Loan Account Number:</label>
+			<input type="text" id="loan-account" name="loan-account" required>
+			<label for="amount">Amount:</label>
+			<input type="number" id="amount" name="amount" min="1" required>
+			<label for="phone-number">M-Pesa / Airtel Money Phone Number:</label>
+			<input type="text" id="phone-number" name="phone-number" required>
+			<button type="submit">Pay with M-Pesa/ Airtel Money</button>
+		</form>
+	</div>
+</body>
+</html>
